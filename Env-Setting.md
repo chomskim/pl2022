@@ -40,6 +40,7 @@
     미리 만든 git-repo 폴더를 찾아 선택  
   3) git-repo 에 있는 프로그램 폴더(pl2022)를 자신의 workspace(js-workspace) 로 copy  
   4) File --> Open Folder  
+  * Git Clone 이 실패하거나 마음에 들지 않으면 pl2022 폴더를 삭제하고 다시 Git Clone 하면 됨
 #### 세팅  
   - 왼쪽 툴바 버튼 중 Extensions 선택  
   - Extension 중 다음을 선택하여 설치  
