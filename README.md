@@ -1,1 +1,5 @@
-# pl2022
+## Programming Languages
+
+## With JavaScript and TypeScript
+
+## By cskim, HUFS, 2022
