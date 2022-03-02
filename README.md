@@ -1,4 +1,4 @@
-## Programming Languages
+# Programming Languages
 
 ## With JavaScript and TypeScript
 
