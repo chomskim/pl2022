@@ -1,9 +1,9 @@
 # Linux VM Install And Setting for pl2022
 
-실력 있는 Full-stack 개발자가 되려면 리눅스를 잘 사용할 줄 알아야 합니다.  
-윈도우 사용자는 VirtualBox를 이용해 리눅스 Virtual Machine을 만들어 사용.  
-오래된 성능이 떨어진 윈도우 컴퓨터는 리눅스 머신으로 새로 인스톨.  
-리눅스는 Ubuntu 20.04 사용  
+- 실력 있는 Full-stack 개발자가 되려면 리눅스를 잘 사용할 줄 알아야 합니다.  
+- 윈도우 사용자는 VirtualBox를 이용해 리눅스 Virtual Machine을 만들어 사용.  
+- 오래된 성능이 떨어진 윈도우 컴퓨터는 리눅스 머신으로 새로 인스톨.  
+- 리눅스는 Ubuntu 20.04 사용  
 
 ## 1. VirtualBox를 이용한 Ubuntu Virtual Machine 설치
 1) https://www.virtualbox.org/wiki/Downloads 에서 원하는 호스트(사용중인 컴퓨터 OS)로 다운로드 및 설치  
