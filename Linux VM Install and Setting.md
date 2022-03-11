@@ -84,6 +84,6 @@ npm install -g yarn
 4) Win10과 같은 방법으로 세팅  
 
 ## 5. Chrome Install
-1) https://dl.google.com/linux/direct/google-chrome-stable_current_amd64.deb 
+1) wget https://dl.google.com/linux/direct/google-chrome-stable_current_amd64.deb 
 2) sudo apt install ./google-chrome-stable_current_amd64.deb
 3) 
