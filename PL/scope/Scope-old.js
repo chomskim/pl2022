@@ -1,16 +1,16 @@
-let i = 100;
-let iarr = [1, 2, 3];
-let s2 = '';
-let j = 99;
+i = 100;
+iarr = [1, 2, 3];
+s2 = '';
+j = 99;
 addj(iarr);
-for (let j = 0; j < iarr.length; ++j) {
-  let s1 = 'Hello';
+for (var j = 0; j < iarr.length; ++j) {
+  var s1 = 'Hello';
   s2 = s1;
   i = j;
   console.log(iarr[j]);
 }
-//console.log(s1) // Error
-let s1 = 'World';
+console.log(s1);
+s1 = 'World';
 console.log(s1, s2);
 console.log('i=', i);
 console.log('j=', j);
