@@ -1,5 +1,3 @@
-j = 0
-
 
 def addj(arr):
     global j
