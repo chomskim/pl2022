@@ -3,7 +3,7 @@ function factorial(n) {
   if (n === 0) return 1;
   else return n * factorial(n - 1);
 }
-const rfact = n=> n===0 ? 1 : n*rfact(n-1);
+const rfact = (n) => (n === 0 ? 1 : n * rfact(n - 1));
 
 function afact(a, n) {
   // Tail Recursion --> 자동으로 Loop으로 변형됨
@@ -18,7 +18,7 @@ for (let i = 1; i <= 10; ++i) {
   console.log(`${i}!=${rfact(i)}`);
   console.log(`${i}!=${fact(i)}`);
 }
-
+/*
 // Fibonacci
 function rfib(n) {
   // recursive, bad algorithm
@@ -84,3 +84,4 @@ for (count = 1; count <= 5000; count++) {
 }
 console.log(`memofib(${num}) = ${fib}`);
 console.log(`Duration ${Date.now() - start} ms`);
+*/

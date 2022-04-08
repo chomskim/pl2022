@@ -15,12 +15,12 @@ function rev(s1, s2) {
   }
 }
 function reverse1(str) {
-  return rev("", str);
+  return rev('', str);
 }
 
-let s1 = "Hello World!";
+let s1 = 'Hello World!';
 console.log(`s1 length=${s1.length}`);
-let s2 = "blah blah blah";
+let s2 = 'blah blah blah';
 
 console.log(`rev1 s1 ${reverse(s1)}`);
 console.log(`rev2 s1 ${reverse1(s1)}`);
@@ -28,6 +28,7 @@ console.log(`rev2 s1 ${reverse1(s1)}`);
 console.log(`rev1 s2 ${reverse(s2)}`);
 console.log(`rev2 s2 ${reverse1(s2)}`);
 
+/*
 //List Reverse
 function reverseList(list) {
   if (list.length === 0) return [];
@@ -42,3 +43,4 @@ function reverseList(list) {
 // Todo Tail Recursive List Reverse
 let li = [1, 2, 3, 4];
 console.log(`reverse ${li} = ${reverseList(li)}`);
+*/
