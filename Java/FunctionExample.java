@@ -10,24 +10,24 @@ public class FunctionExample {
     p = q;
     q = temp;
   }
-  static void swap2(int[] arr){
+  static void swap3(int[] arr){
     int temp = arr[0];
     arr[0] = arr[1];
     arr[1] = temp;
   }
 
-  public static main(String[] args){
+  public static void main(String[] args) {
     int a = 100;
     int b = 200;
     int[] vals = {100, 200};
 
-    swap1(a,b)
+    swap1(a,b);
     System.out.println(a+" "+b);
 
-    swap2(a,b)
+    swap2(a,b);
     System.out.println(a+" "+b);
 
-    swap3(vals)
+    swap3(vals);
     System.out.println(vals[0]+" "+vals[1]);
 
 
