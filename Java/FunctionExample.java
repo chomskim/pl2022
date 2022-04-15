@@ -16,6 +16,12 @@ public class FunctionExample {
     arr[1] = temp;
   }
 
+  static int ifthen(boolean c, int e1, int e2) {
+    if (c)
+      return e1;
+    else
+      return e2;
+  }
   public static void main(String[] args) {
     int a = 100;
     int b = 200;
@@ -30,8 +36,11 @@ public class FunctionExample {
     swap3(vals);
     System.out.println(vals[0]+" "+vals[1]);
 
+    boolean c = true;
+    int e1 = 0;
+    int e2 = 100;
+    System.out.println("ifthen(true, e1, e2/e1)"+ifthen(true, e1, e2/e1));
 
   }
   
-
 }
