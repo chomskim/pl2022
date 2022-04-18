@@ -13,6 +13,7 @@ let book = {
 };
 console.log(book['main title']);
 console.log(book['for']);
+console.log(book.for);
 console.log(book.author);
 console.log(book.author.firstname);
 console.log(book.author['surname']);
@@ -33,13 +34,21 @@ console.log(newBook);
 console.log(book === newBook);
 console.log(book == newBook);
 console.log(Object.is(book, newBook));
+
+let obj1 = { x: 1, y: { z: 1 } };
+let obj2 = { x: 1, y: { z: 1 } };
+let obj3 = { y: { z: 1 }, x: 1 };
+console.log(obj1 == obj2);
+console.log(obj1 === obj2);
+console.log(JSON.stringify(obj1) === JSON.stringify(obj2));
+console.log(JSON.stringify(obj1) === JSON.stringify(obj3));
+
 const num = 100000000000000;
 console.log(num.toLocaleString());
 console.log(parseInt(num.toLocaleString().replace(/,/g, '')));
 //console.log(parseInt(num.toLocaleString().replaceAll(',','')));
 
-const p =
-  'The quick brown fox jumps over the lazy dog. If the dog reacted, was it really lazy?';
+const p = 'The quick brown fox jumps over the lazy dog. If the dog reacted, was it really lazy?';
 console.log(p.replace('dog', 'monkey'));
 
 let x = 1;

@@ -36,7 +36,7 @@ console.log(a);
 a = Array.of(5, 4, 3, 2, 1, 'testing, testing');
 console.log(a);
 copy = Array.from(original); // copy
-console.log(a[a.length - 1]);
+console.log(a[a.length - 1]); // last element of a
 
 a = []; // Start with an empty array
 a.push('zero'); // Add a value at the end. a = ["zero"]
@@ -108,12 +108,13 @@ q.push(3); // q == [2, 3]
 console.log(q.shift()); // q == [3]; returns 2
 q.shift(); // q == []; returns 3
 
+console.log('unshift');
 q.unshift(1); // a == [1]
-q.unshift(2);
+q.unshift(2); // a == [2,1]
 console.log(q);
 
 a = [1, 2, 3, 4, 5];
-console.log(a.slice(0, 3)); // Returns [1,2,3]
+console.log(a.slice(1, 3)); // Returns [2,3]
 console.log(a.slice(3)); // Returns [4,5]
 console.log(a.slice(1, -1)); // Returns [2,3,4]
 console.log(a.slice(-3, -2)); // Returns [3]
