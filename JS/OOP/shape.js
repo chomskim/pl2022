@@ -30,6 +30,9 @@ function totalAreas(allShapes) {
   let total = 0.0;
   for (let i = 0; i < allShapes.length; ++i) {
     const s = allShapes[i];
+    console.log(s instanceof Shape);
+    console.log(s instanceof Circle);
+    console.log(s instanceof Rectangle);
     console.log(`${s.toString()} -- area=${s.computeArea()}`);
     total += s.computeArea();
   }
