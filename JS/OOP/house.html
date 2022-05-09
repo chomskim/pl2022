@@ -7,12 +7,14 @@
   </head>
   <body>
     <div style="position: absolute; top: 50px; left: 50px">
-      <canvas id="houseCanvas" width="800" height="450"> Your browser does not support HTML5 Canvas. </canvas>
+      <canvas id="houseCanvas" width="800" height="450" style="background: yellow">
+        Your browser does not support HTML5 Canvas.
+      </canvas>
     </div>
     <script type="text/javascript">
       function main() {
-        const canvas = document.getElementById("houseCanvas");
-        const context = canvas.getContext("2d");
+        const canvas = document.getElementById('houseCanvas');
+        const context = canvas.getContext('2d');
 
         const houseList = [];
         let house1 = new House(null, 50, 50, 200, 350);

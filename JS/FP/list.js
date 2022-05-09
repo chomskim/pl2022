@@ -1,7 +1,7 @@
 let a = [2, 4, 6, 8, 10];
 console.log(`a=[${a}]`);
 console.log(`a.head()=${a[0]}`);
-console.log(`a.tail()=${a.slice(1)}`);
+console.log(`a.tail()=[${a.slice(1)}]`);
 console.log(`a.last()=${a[a.length - 1]}`);
 
 console.log(`a.map(x=>x*x)=[${a.map((x) => x * x)}]`);
@@ -19,6 +19,26 @@ console.log(`a.filter(le4)=[${a.filter(le4)}]`);
 console.log(`a.reduce((x,y)=>x+y, 0)=${a.reduce((x, y) => x + y, 0)}`);
 console.log(`a.reduce((x,y)=>x*y, 1)=${a.reduce((x, y) => x * y, 1)}`);
 console.log(`a.reduce((x,y)=>x.concat(y), [])=[${a.reduce((x, y) => x.concat(y), [])}]`);
+
+let newa = [];
+a.forEach((x) => {
+  newa.push(x);
+});
+console.log(`newa=[${newa}]`);
+newa = [];
+for (let i = 0; i < a.length; i += 1) {
+  newa.push(a[i]);
+}
+console.log(`newa=[${newa}]`);
+newa = [];
+for (x of a) {
+  newa.push(x);
+}
+console.log(`newa=[${newa}]`);
+
+a.forEach((x, i) => {
+  console.log(`i=${i} a[i]=${x}`);
+});
 
 function zip(L1, L2, f) {
   return L1.map((l1, i) => f(l1, L2[i]));

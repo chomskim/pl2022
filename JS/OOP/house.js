@@ -1,13 +1,14 @@
 function colorString(r, g, b) {
-	return "rgb(" + r + "," + g + "," + b + ")";
+  return 'rgb(' + r + ',' + g + ',' + b + ')';
 }
-const COLOR_BLACK = colorString(0,0,0);
+const COLOR_BLACK = colorString(0, 0, 0);
 const COLOR_WHITE = colorString(255, 255, 255);
 const COLOR_RED = colorString(255, 0, 0);
+const Light_yellow1 = colorString(255, 255, 204);
 
 class Shape {
   constructor(parent, x, y, w, h) {
-    this.name = "Shape";
+    this.name = 'Shape';
     this.parent = parent;
     this.x = x || 0;
     this.y = y || 0;
@@ -29,7 +30,7 @@ class Shape {
     }
   }
   toString = function () {
-    const pn = this.parent ? this.parent.name : "no parent";
+    const pn = this.parent ? this.parent.name : 'no parent';
     return `${this.name}{parent:${pn}, x:${this.x}, y:${this.y}, width:${this.width}, height:${this.height}}`;
   };
 }
@@ -39,10 +40,10 @@ class House extends Shape {
     super(parent, x, y, w, h);
     this.wall = null;
     this.roof = null;
-    this.name = "House";
+    this.name = 'House';
   }
   draw(ctx) {
-    console.log("House draw with Contex="+this.toString()+" absX="+this.absX()+" absY="+this.absY());
+    console.log('House draw with Contex=' + this.toString() + ' absX=' + this.absX() + ' absY=' + this.absY());
     this.wall.draw(ctx);
     this.roof.draw(ctx);
   }
@@ -53,13 +54,13 @@ class Wall extends Shape {
     super(parent, x, y, w, h);
     this.door = null;
     this.windows = [];
-    this.name = "Wall";
+    this.name = 'Wall';
   }
   draw(ctx) {
     const ax = this.absX();
     const ay = this.absY();
 
-    ctx.fillStyle = COLOR_WHITE;
+    ctx.fillStyle = Light_yellow1; //COLOR_WHITE;
     ctx.fillRect(ax, ay, this.width, this.height);
 
     ctx.strokeStyle = COLOR_BLACK;
@@ -75,7 +76,7 @@ class Wall extends Shape {
 class Roof extends Shape {
   constructor(parent, x, y, w, h) {
     super(parent, x, y, w, h);
-    this.name = "Roof";
+    this.name = 'Roof';
   }
   draw(ctx) {}
 }
@@ -83,7 +84,7 @@ class Roof extends Shape {
 class CathedralRoof extends Roof {
   constructor(parent, x, y, w, h) {
     super(parent, x, y, w, h);
-    this.name = "CathedralRoof";
+    this.name = 'CathedralRoof';
   }
   draw(ctx) {
     const ax = this.absX();
@@ -110,7 +111,7 @@ class CathedralRoof extends Roof {
 class DomeRoof extends Roof {
   constructor(parent, x, y, w, h) {
     super(parent, x, y, w, h);
-    this.name = "DomeRoof";
+    this.name = 'DomeRoof';
   }
   draw(ctx) {
     const ax = this.absX();
@@ -136,7 +137,7 @@ class DomeRoof extends Roof {
 class GambrelRoof extends Roof {
   constructor(parent, x, y, w, h) {
     super(parent, x, y, w, h);
-    this.name = "GambrelRoof";
+    this.name = 'GambrelRoof';
   }
   draw(ctx) {
     const ax = this.absX();
@@ -170,7 +171,7 @@ class Window extends Shape {
   constructor(parent, x, y, w, h) {
     super(parent, x, y, w, h);
     this.sash = false;
-    this.name = "Window";
+    this.name = 'Window';
   }
   draw(ctx) {
     const ax = this.absX();
@@ -192,7 +193,7 @@ class Window extends Shape {
 class DoubleWindow extends Window {
   constructor(parent, x, y, w, h) {
     super(parent, x, y, w, h);
-    this.name = "DoubleWindow";
+    this.name = 'DoubleWindow';
   }
   draw(ctx) {
     const ax = this.absX();
@@ -220,10 +221,10 @@ class DoubleWindow extends Window {
 class QuadWindow extends Window {
   constructor(parent, x, y, w, h) {
     super(parent, x, y, w, h);
-    this.name = "QuadWindow";
+    this.name = 'QuadWindow';
   }
   draw(ctx) {
-    console.log("QuadWindow draw with Contex="+this.toString()+" absX="+this.absX()+" absY="+this.absY());
+    console.log('QuadWindow draw with Contex=' + this.toString() + ' absX=' + this.absX() + ' absY=' + this.absY());
     const ax = this.absX();
     const ay = this.absY();
 
@@ -255,7 +256,7 @@ class Door extends Shape {
   constructor(parent, x, y, w, h) {
     super(parent, x, y, w, h);
     this.leftKnob = false;
-    this.name = "Door";
+    this.name = 'Door';
   }
   draw(ctx) {
     var ax = this.absX();
