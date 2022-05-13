@@ -47,3 +47,71 @@ console.log(`fun(10, incx)=${fun(10, incx)}`);
 d = 3;
 console.log(`fun(10, incx)=${fun(10, incx)}`);
 console.log(`fun(10, x => x+d)=${fun(10, (x) => x + d)}`);
+
+const fa1 = (n) => {
+  if (n <= 1) return 1;
+  else return n * fa1(n - 1);
+};
+const fa2 = (n) => (n <= 1 ? 1 : n * fa2(n - 1));
+console.log(`fa1(5)=${fa1(5)} fa2(5)=${fa2(5)}`);
+
+const i = (x) => ({ v: x, w: x });
+console.log(`i(5)=${JSON.stringify(i(5))}`);
+
+function hypotenuse(a, b) {
+  function square(x) {
+    return x * x;
+  }
+  return Math.sqrt(square(a) + square(b));
+}
+console.log(`hypotenuse(5,10)=${hypotenuse(5, 10)}`);
+
+function distance(x1, y1, x2, y2) {
+  let dx = x2 - x1;
+  let dy = y2 - y1;
+  return hypotenuse(dx, dy);
+}
+console.log(`distance(0, 0, 1, 1)=${distance(0, 0, 1, 1)}`);
+
+function swap(obj) {
+  const { x, y } = obj;
+  console.log(`obj=${JSON.stringify(obj)} x=${x} y=${y}`);
+  return { x: y, y: x };
+}
+console.log(`swap({ x: 100, y: 200 }) ${JSON.stringify(swap({ x: 100, y: 200 }))}`);
+//let x = 50;
+//let y = 70;
+//{x,y} = swap({x,y})
+let { x, y } = swap({ x: 50, y: 70 });
+console.log(`x=${x} y=${y}`);
+
+console.log(`swap({ x, y }) ${JSON.stringify(swap({ x, y }))}`);
+console.log(`swap({ x: 100, y: 200, z: 0 }) ${JSON.stringify(swap({ x: 100, y: 200, z: 0 }))}`);
+
+let a = [(x) => x * x, 20];
+console.log(`a[0](a[1])=${a[0](a[1])}`);
+
+(function () {
+  let scope = 'global scope'; // A global variable
+  function checkscope() {
+    let scope = 'local scope'; // A local variable
+    function f() {
+      return scope;
+    } // Return the value in scope here
+    return f();
+  }
+  console.log(checkscope());
+})();
+
+(function () {
+  let scope = 'global scope'; // A global variable
+  function checkscope() {
+    let scope = 'local scope'; // A local variable
+    function f() {
+      return scope;
+    } // Return the value in scope here
+    return f;
+  }
+  let s = checkscope()();
+  console.log(s);
+})();
