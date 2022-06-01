@@ -33,6 +33,8 @@ export default class Card implements Comparable {
       case Card.SPADE:
         image = 'SP-'
         break
+      default:
+        image = ''
     }
     switch (this.rank) {
       case Card.ACE:
