@@ -4,7 +4,7 @@ import Card from './card'
 export default class FiveCards implements Comparable {
   fiveCards: Card[]
   constructor(cards: Card[]) {
-    this.fiveCards = [...cards]
+    this.fiveCards = [...cards] // copy
     //FiveCards.reorder()
   }
 

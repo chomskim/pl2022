@@ -62,7 +62,10 @@ class Card extends Comparable {
     return lrank - rrank
   }
   static compare(left, right) {
-    return left.compareTo(right)
+    const lrank = left.rank === Card.ACE ? Card.KING + 1 : left.rank
+    const rrank = right.rank === Card.ACE ? Card.KING + 1 : right.rank
+
+    return lrank - rrank
   }
 }
 

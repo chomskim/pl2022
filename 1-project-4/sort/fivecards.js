@@ -23,6 +23,9 @@ class FiveCards extends Comparable {
   reorder() {
     this.fiveCards = selSort(this.fiveCards)
   }
+  static compare(left, right) {
+    return left.compareTo(right)
+  }
 }
 
 module.exports = FiveCards

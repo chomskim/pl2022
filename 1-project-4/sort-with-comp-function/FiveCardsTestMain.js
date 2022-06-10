@@ -91,6 +91,8 @@ const fourCards = [
   new Card(Card.CLUB, 2),
 ]
 list5card.push(new FiveCards(fourCards))
+// Add same card to test equal compare
+list5card.push(new FiveCards(fourCards))
 
 const fullhouse = [
   new Card(Card.CLUB, 1),
@@ -164,8 +166,18 @@ console.log('---sorted use compareTo---')
 printFiveCardsList(list5card.sort((left, right) => left.compareTo(right)))
 console.log('---sorted use static compare---')
 printFiveCardsList(list5card.sort(FiveCards.compare))
-console.log('---sorted use selSort---')
-printFiveCardsList(selSort(list5card))
+console.log('---sorted use selSort and FiveCards.compare---')
+printFiveCardsList(selSort(list5card, FiveCards.compare))
 
-console.log('---sorted use quickSort---')
-printFiveCardsList(quickSort(list5card))
+console.log('---sorted use quickSort and FiveCards.compare---')
+printFiveCardsList(quickSort(list5card, FiveCards.compare))
+
+function comp1(left, right) {
+  for (let i = 0; i < left.length; ++i) {
+    let res = left.compareTo(right)
+    if (res !== 0) return res
+  }
+  return 0
+}
+console.log('---sorted use quickSort and comp1---')
+printFiveCardsList(quickSort(list5card, comp1))
