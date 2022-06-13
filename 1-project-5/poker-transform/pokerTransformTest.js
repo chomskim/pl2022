@@ -32,10 +32,7 @@ function getPairTransform(fcList) {
 }
 
 const isStraight = (list5) =>
-  list5.reduce(
-    (prev, curr, i) => (i === list5.length - 1 ? prev : prev && list5[i] === list5[i + 1] + 1),
-    true
-  )
+  list5.reduce((prev, curr, i) => (i === list5.length - 1 ? prev : prev && list5[i] === list5[i + 1] + 1), true)
 
 function changeAceToOne(fcList) {
   //fclist -- list of fiveCards ranks
@@ -89,9 +86,7 @@ function printFiveCardsList(fcList) {
 }
 printFiveCardsList(cardList)
 
-let rankList = cardList.map((fc) =>
-  fc.fiveCards.map((ca) => (ca.rank === Card.ACE ? Card.KING + 1 : ca.rank))
-)
+let rankList = cardList.map((fc) => fc.fiveCards.map((ca) => (ca.rank === Card.ACE ? Card.KING + 1 : ca.rank)))
 console.log(`rankList=${JSON.stringify(rankList)}`)
 
 let pairList = rankList.map(getPairs)
@@ -105,7 +100,7 @@ console.log(`straightScoreList=${JSON.stringify(straightScoreList)}`)
 let straightTransformList = rankList.map(getStraightTransform)
 console.log(`straightTransformList=${JSON.stringify(straightTransformList)}`)
 
-let pokerTransformList = rankList.map(pokerTransform)
+let pokerTransformList = cardList.map(pokerTransform)
 console.log(`pokerTransformList=${JSON.stringify(pokerTransformList)}`)
 
 module.exports = pokerTransform

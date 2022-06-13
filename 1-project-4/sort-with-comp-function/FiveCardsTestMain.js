@@ -92,7 +92,15 @@ const fourCards = [
 ]
 list5card.push(new FiveCards(fourCards))
 // Add same card to test equal compare
-list5card.push(new FiveCards(fourCards))
+const fourCards1 = [
+  new Card(Card.CLUB, 1),
+  new Card(Card.DIAMOND, 1),
+  new Card(Card.HEART, 1),
+  new Card(Card.SPADE, 1),
+  new Card(Card.SPADE, 2),
+]
+
+list5card.push(new FiveCards(fourCards1))
 
 const fullhouse = [
   new Card(Card.CLUB, 1),
